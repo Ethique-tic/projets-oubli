@@ -1,0 +1,141 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// Welcome title is in Orbitron font
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700);
+
+h1.welcome {
+	font-family: "Orbitron", sans-serif !important;
+	color: #D7FFE9;
+}
+
+.stainedglass {
+	padding: 10px 20px 10px 20px !important;
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stainedglassbutton {
+	display: inline-block;
+	padding: 10px 20px 10px 20px !important;
+	background-color: rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+	color: aliceblue;
+	border: none;
+	transition: all 0.5s;
+	vertical-align:middle;
+	cursor: pointer;
+	width: 170px;
+}
+
+.stainedglassbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  vertical-align: middle;
+}
+
+.stainedglassbutton span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.stainedglassbutton:hover span {
+  padding-right: 25px;
+}
+
+.stainedglassbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.stainedglassbuttonfooter {
+	display: inline-block;
+	padding: 10px 20px 10px 20px !important;
+	background-color: rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+	color: aliceblue;
+	border: none;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 0px -1px;
+}
+
+.stainedglassbuttonfooter span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.stainedglassbuttonfooter:hover {
+  padding-top: 25px !important;
+}
+
+.stainedglassbuttonfooter:hover:after {
+  opacity: 1;
+  top: 0;
+}
+
+
+.reveal .footer {
+  position: absolute;
+  bottom: 0em;
+  font-size: 0.5em;
+  margin: 0% 37%;
+  z-index: 100;
+}
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 20px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: inherit;
+$linkColorHover: inherit; //lighten( $linkColor, 15% );
+$selectionBackgroundColor: inherit; //lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
