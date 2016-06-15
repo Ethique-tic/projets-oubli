@@ -16,7 +16,7 @@
 		<div class="reveal center">
 			<div class="bubbles" style="position: fixed;"></div>
 			<div class="slides">
-				<object data="svg/acteurs.svg" style="width: 100%;"></object>
+				<object data="svg/acteurs.svg" id="acteurs" style="width: 100%;"></object>
 			</div>
 			<div class='footer'>
 					<button type="button" onclick="location.href='/index.html';" class="stainedglassbuttonfooter">
@@ -60,6 +60,20 @@
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+		<script>
+			var a = document.getElementById("acteurs");
+
+			a.addEventListener("load", function(){
+				var svgDoc = a.contentDocument; // inner DOM
+				// Get elements to add events to them
+				var Google = svgDoc.getElementById("Google");
+
+				// Add event listeners now !
+				Google.addEventListener("mousedown", function() {
+					Google.style.opacity = 0;
+				}, false);
+			}, false);
 		</script>
 		<script>
 			var $bubbles = $('.bubbles');
