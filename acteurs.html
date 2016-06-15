@@ -111,12 +111,103 @@
 			a.addEventListener("load", function(){
 				var svgDoc = a.contentDocument; // inner DOM
 				// Get elements to add events to them
-				var Google = svgDoc.getElementById("Google");
+				var texte_Bing_Yahoo = svgDoc.getElementById("Bing_Yahoo");
+				var texte_Google = svgDoc.getElementById("Google");
+				var texte_People_Artist = svgDoc.getElementById("People_Artist");
+				var texte_Radiohead = svgDoc.getElementById("Radiohead");
+				var texte_NKM = svgDoc.getElementById("NKM");
+				var texte_TOR_VPN_Duckduckgo = svgDoc.getElementById("TOR_VPN_Duckduckgo");
+				var texte_Mario_costeja_Gonzalez = svgDoc.getElementById("Mario_costeja_Gonzalez");
+				var texte_Stacy_Snyder = svgDoc.getElementById("Stacy_Snyder");
+				var texte_Gouv_Americain = svgDoc.getElementById("Gouv_Americain");
+				var texte_NSA = svgDoc.getElementById("NSA");
+				var texte_Edward_Sowden = svgDoc.getElementById("Edward_Sowden");
+				var texte_Quadrature_du_net = svgDoc.getElementById("Quadrature_du_net");
+				var texte_Gouv_Francais = svgDoc.getElementById("Gouv_Francais");
+				var texte_Particulier = svgDoc.getElementById("Particulier");
+				var texte_Effacemoicom = svgDoc.getElementById("Effacemoi");
+				var texte_Reseaux_sociaux = svgDoc.getElementById("Reseaux_sociaux");
+				var texte_Archivistes_et_historiens = svgDoc.getElementById("Archivistes_et_historiens");
+				var texte_Parlement = svgDoc.getElementById("Parlement");
+				var texte_ereputation = svgDoc.getElementById("ereputation");
+				var texte_ONG = svgDoc.getElementById("ONG");
+				var texte_UFC = svgDoc.getElementById("UFC");
+				var texte_CJUE = svgDoc.getElementById("CJUE");
+				var texte_CNIL_et_G29 = svgDoc.getElementById("CNIL_et_G29");
+				var texte_Intro = svgDoc.getElementById("Intro");
+				var event_Bing_Yahoo = svgDoc.getElementById("Bing_yahoo_boite");
+				var event_Google = svgDoc.getElementById("Google_boite");
+				var event_People_Artist = svgDoc.getElementById("people_artiste_boite");
+				var event_Radiohead = svgDoc.getElementById("Radiohead_boite");
+				var event_NKM = svgDoc.getElementById("NKM_boite");
+                var event_TOR_VPN_Duckduckgo = svgDoc.getElementById("Duckduckgo_boite");
+				var event_Mario_costeja_Gonzalez = svgDoc.getElementById("Mario_gonzalez_boite");
+				var event_Stacy_Snyder = svgDoc.getElementById("Stacy_snyder_boite");
+				var event_Gouv_Americain = svgDoc.getElementById("gouv_americain_boite");
+				var event_NSA = svgDoc.getElementById("NSA_boite");
+				var event_Edward_Sowden = svgDoc.getElementById("Snowden_boite");
+				var event_Quadrature_du_net = svgDoc.getElementById("Quadrature_net_boite");
+				var event_Gouv_Francais = svgDoc.getElementById("Gouv_francais_boite");
+				var event_Particulier = svgDoc.getElementById("Particulier_boite");
+				var event_Effacemoicom = svgDoc.getElementById("accountkiller_boite");
+				var event_Reseaux_sociaux = svgDoc.getElementById("Myspace_twitter_boite");
+				var event_Archivistes_et_historiens = svgDoc.getElementById("archivistes_boite");
+				var event_ereputation = svgDoc.getElementById("agence_reputation_boite");
+				var event_UFC = svgDoc.getElementById("UFC_boite");
+				var event_CJUE = svgDoc.getElementById("CJUE_boite");
+				var event_CNIL_et_G29 = svgDoc.getElementById("G29_CNIL_boite");
+
+                var current_use;
+
+                function toggleop(texte) {
+                    texte_Intro.style.opacity = 0;
+                    texte_Bing_Yahoo.style.opacity = 0;
+                    texte_Google.style.opacity = 0;
+                    texte_People_Artist	.style.opacity = 0;
+                    texte_Radiohead.style.opacity = 0;
+                    texte_NKM.style.opacity = 0;
+                    texte_TOR_VPN_Duckduckgo.style.opacity = 0;
+                    texte_Mario_costeja_Gonzalez.style.opacity = 0;
+                    texte_Stacy_Snyder.style.opacity = 0;
+                    texte_Gouv_Americain.style.opacity = 0;
+                    texte_NSA.style.opacity = 0;
+                    texte_Edward_Sowden.style.opacity = 0;
+                    texte_Quadrature_du_net.style.opacity = 0;
+                    texte_Gouv_Francais.style.opacity = 0;
+                    texte_Particulier.style.opacity = 0;
+                    texte_Effacemoicom.style.opacity = 0;
+                    texte_Reseaux_sociaux.style.opacity = 0;
+                    texte_Archivistes_et_historiens.style.opacity = 0;
+                    texte_ereputation.style.opacity = 0;
+                    texte_UFC.style.opacity = 0;
+                    texte_CJUE.style.opacity = 0;
+                    texte_CNIL_et_G29.style.opacity = 0;
+                    texte.style.opacity = 1;
+                }
 
 				// Add event listeners now !
-				Google.addEventListener("mousedown", function() {
-					Google.style.opacity = 0;
-				}, false);
+				event_Bing_Yahoo                .addEventListener ( "mousedown", function ( )                { toggleop        ( texte_Bing_Yahoo);}, false);
+				event_Google                    .addEventListener ( "mousedown", function ( )                    { toggleop    ( texte_Google);	}, false);
+				event_People_Artist             .addEventListener ( "mousedown", function ( )             { toggleop           ( texte_People_Artist);	}, false);
+				event_Radiohead                 .addEventListener ( "mousedown", function ( )                 { toggleop       ( texte_Radiohead);	}, false);
+				event_NKM                       .addEventListener ( "mousedown", function ( )                       { toggleop ( texte_NKM);	}, false);
+				event_TOR_VPN_Duckduckgo        .addEventListener ( "mousedown", function ( )        { toggleop                ( texte_TOR_VPN_Duckduckgo);	}, false);
+				event_Mario_costeja_Gonzalez    .addEventListener ( "mousedown", function ( )    { toggleop                    ( texte_Mario_costeja_Gonzalez);	}, false);
+				event_Stacy_Snyder              .addEventListener ( "mousedown", function ( )              { toggleop          ( texte_Stacy_Snyder);	}, false);
+				event_Gouv_Americain            .addEventListener ( "mousedown", function ( )            { toggleop            ( texte_Gouv_Americain);	}, false);
+				event_NSA                       .addEventListener ( "mousedown", function ( )                       { toggleop ( texte_NSA);	}, false);
+				event_Edward_Sowden             .addEventListener ( "mousedown", function ( )             { toggleop           ( texte_Edward_Sowden);	}, false);
+				event_Quadrature_du_net         .addEventListener ( "mousedown", function ( )         { toggleop               ( texte_Quadrature_du_net);	}, false);
+				event_Gouv_Francais             .addEventListener ( "mousedown", function ( )             { toggleop           ( texte_Gouv_Francais);	}, false);
+				event_Particulier               .addEventListener ( "mousedown", function ( )               { toggleop         ( texte_Particulier);	}, false);
+				event_Effacemoicom              .addEventListener ( "mousedown", function ( )              { toggleop          ( texte_Effacemoicom);	}, false);
+				event_Reseaux_sociaux           .addEventListener ( "mousedown", function ( )           { toggleop             ( texte_Reseaux_sociaux);	}, false);
+				event_Archivistes_et_historiens .addEventListener ( "mousedown", function ( ) { toggleop                       ( texte_Archivistes_et_historiens);	}, false);
+				event_ereputation              .addEventListener  ( "mousedown", function ( )                { toggleop        ( texte_ereputation);  }, false);
+				event_UFC                       .addEventListener ( "mousedown", function ( )                       { toggleop ( texte_UFC);	}, false);
+				event_CJUE                      .addEventListener ( "mousedown", function ( )                      { toggleop  ( texte_CJUE);	}, false);
+				event_CNIL_et_G29               .addEventListener ( "mousedown", function ( )               { toggleop         ( texte_CNIL_et_G29);	}, false);
+
 			}, false);
 		</script>
 		<script>
