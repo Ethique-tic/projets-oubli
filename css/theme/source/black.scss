@@ -16,10 +16,25 @@
 
 // Welcome title is in Orbitron font
 @import url(https://fonts.googleapis.com/css?family=Orbitron:700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
 h1.welcome {
 	font-family: "Orbitron", sans-serif !important;
 	color: #D7FFE9;
+}
+
+.wrappergoogle {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    margin: 25px 0px 0px 12% !important;
+}
+
+.matrix {
+	position: absolute;
+	left: -33.33%;
+	top : -33.33%;
+	z-index: -1;
 }
 
 .stainedglass {
@@ -100,10 +115,11 @@ h1.welcome {
 
 
 .reveal .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0em;
   font-size: 0.5em;
-  margin: 0% 37%;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
 
